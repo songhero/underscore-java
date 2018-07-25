@@ -59,7 +59,7 @@ public final class Optional<T> {
         if (!isPresent()) {
             return absent();
         } else {
-            return Optional.fromNullable(mapper.apply(arg));
+            return (Optional<U>) Optional.fromNullable(mapper.apply(arg));
         }
     }
 
